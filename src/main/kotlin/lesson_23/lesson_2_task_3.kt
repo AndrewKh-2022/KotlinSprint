@@ -1,5 +1,7 @@
 package lesson_23
 
+const val numberOfMinutes = 60
+
 fun main(){
     val hoursDepart = 9
     val minutesDepart = 39
@@ -12,10 +14,10 @@ fun main(){
     val minutesTemp: Int
     val timeOfArrival: String
 
-    hoursOnWay = minutesOnWayTotal / 60
-    minutesOnWay = minutesOnWayTotal % 60
-    hoursTemp = (minutesDepart + minutesOnWay) / 60
-    minutesTemp = (minutesDepart + minutesOnWay) % 60
+    hoursOnWay = minutesOnWayTotal / numberOfMinutes
+    minutesOnWay = minutesOnWayTotal % numberOfMinutes
+    hoursTemp = (minutesDepart + minutesOnWay) / numberOfMinutes
+    minutesTemp = (minutesDepart + minutesOnWay) % numberOfMinutes
     hoursArrival = hoursDepart + hoursOnWay + hoursTemp
     minutesArrival = minutesTemp
 
